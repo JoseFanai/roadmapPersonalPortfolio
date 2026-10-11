@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+@media (max-width: 600){
+    nav{
+        display: flex;
+        flex-direction: column;
+    }    
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+/* hero */
+.hero {
+    padding: 80px;
+    justify-items: center;
+}
+
+.hero h1 {
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* projects */
+#Projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 30px;
+    /* border: solid black 1px; */
+}
+
+.project {
+    border: black 2px solid;
+    padding: 20px;
+}
+.project h2 {
+    padding-bottom: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: black;
+}
+
+.project a:hover {
+    color: blue;
+}
+
+.experience {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.experience .exp1 {
+    padding: 10px;
+}
+
+.exp1 a {
+    text-decoration: none;
+    color: blue;
+}
+
+.experience .exp2 {
+    padding: 10px;
+}
+
+.exp2 a {
+    text-decoration: none;
+    color: blue;
+}
+
+.education {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.education p {
+    padding: 10px;
+}
+
+.education ul li {
+    list-style: inside;
+}
+
+/* Articles */
+#Articles h3{
+    margin: 50px 0px 0px 50px;
+}
+.art-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 50px;
+    gap: 30px;
+}
+
+.art1 {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+
+.art2 {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+}
+.art3 {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.author {
+    margin-top: 10px;
+    color: hsl(204, 43%, 61%);
+}
+
+/* contact */
+#Contact {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-items: center;
+}
+
+#form {
+    background-color: rgb(155, 167, 187);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+#form label {
+    display: flex;
+    padding: 10px;
+}
+
+#form input {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+#form textarea {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+footer {
+    justify-items: center;
+    padding: 50px;
+}
+
