@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -11,13 +12,15 @@ nav {
     background-color: #333;
     padding: 10px;
     color: white;
+    flex-wrap: wrap; /* Phone a a len theih nan */
 }
 
-@media (max-width: 600){
-    nav{
-        display: flex;
-        flex-direction: column;
-    }    
+@media (max-width: 600px){
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 nav ul {
@@ -37,8 +40,8 @@ nav ul li a:hover {
 
 /* hero */
 .hero {
-    padding: 80px;
-    justify-items: center;
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .hero h1 {
@@ -47,13 +50,14 @@ nav ul li a:hover {
     font-style: normal;
 }
 
-/* projects */
+
+   /* MOBILE VIEW (Phone atana default) */
 #Projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr; /* Tlar khatah pakhat chiah */
+    gap: 20px;
     margin-bottom: 30px;
-    /* border: solid black 1px; */
+    padding: 0 20px;
 }
 
 .project {
@@ -78,20 +82,11 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-.experience .exp1 {
-    padding: 10px;
+.experience .exp1, .experience .exp2 {
+    padding: 10px 0;
 }
 
-.exp1 a {
-    text-decoration: none;
-    color: blue;
-}
-
-.experience .exp2 {
-    padding: 10px;
-}
-
-.exp2 a {
+.exp1 a, .exp2 a {
     text-decoration: none;
     color: blue;
 }
@@ -102,38 +97,25 @@ nav ul li a:hover {
 }
 
 .education p {
-    padding: 10px;
+    padding: 10px 0;
 }
 
-.education ul li {
-    list-style: inside;
+.education ul {
+    padding-left: 20px;
 }
 
 /* Articles */
 #Articles h3{
-    margin: 50px 0px 0px 50px;
+    margin: 50px 0px 0px 20px;
 }
 .art-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 50px;
+    grid-template-columns: 1fr; /* Tlar khatah pakhat chiah */
+    padding: 20px;
     gap: 30px;
 }
 
-.art1 {
-    border: 2px solid black;
-    border-radius: 25px;
-    padding: 30px;
-}
-
-
-.art2 {
-    border: 2px solid black;
-    border-radius: 25px;
-    padding: 30px;
-}
-.art3 {
+.art1, .art2, .art3 {
     border: 2px solid black;
     border-radius: 25px;
     padding: 30px;
@@ -146,33 +128,27 @@ nav ul li a:hover {
 
 /* contact */
 #Contact {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    justify-items: center;
+    margin: 100px 20px;
 }
 
 #form {
     background-color: rgb(155, 167, 187);
     border-radius: 20px;
-    padding: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 #form label {
-    display: flex;
-    padding: 10px;
+    padding: 10px 0;
 }
 
-#form input {
-    display: block;
+#form input, #form textarea {
+    width: 100%;
     padding: 10px;
     border: none;
     border-radius: 10px;
-}
-
-#form textarea {
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
+    margin-bottom: 15px;
 }
 
 button {
@@ -181,14 +157,205 @@ button {
     border-radius: 10px;
     background-color: blue;
     color: white;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: aqua;
+    color: black;
 }
 
 footer {
-    justify-items: center;
+    text-align: center;
     padding: 50px;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    flex-wrap: wrap; /* Phone a a len theih nan */
+}
+
+@media (max-width: 600px){
+    nav ul {
+        margin-top: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: blue;
+}
+
+/* hero */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ==================================
+   MOBILE VIEW (Phone atana default)
+   ================================== */
+#Projects {
+    display: grid;
+    grid-template-columns: 1fr; /* Tlar khatah pakhat chiah */
+    gap: 20px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.project {
+    border: black 2px solid;
+    padding: 20px;
+}
+.project h2 {
+    padding-bottom: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: black;
+}
+
+.project a:hover {
+    color: blue;
+}
+
+.experience {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.experience .exp1, .experience .exp2 {
+    padding: 10px 0;
+}
+
+.exp1 a, .exp2 a {
+    text-decoration: none;
+    color: blue;
+}
+
+.education {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.education p {
+    padding: 10px 0;
+}
+
+.education ul {
+    padding-left: 20px;
+}
+
+/* Articles */
+#Articles h3{
+    margin: 50px 0px 0px 20px;
+}
+.art-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Tlar khatah pakhat chiah */
+    padding: 20px;
+    gap: 30px;
+}
+
+.art1, .art2, .art3 {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.author {
+    margin-top: 10px;
+    color: hsl(204, 43%, 61%);
+}
+
+/* contact */
+#Contact {
+    margin: 100px 20px;
+}
+
+#form {
+    background-color: rgb(155, 167, 187);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form label {
+    padding: 10px 0;
+}
+
+#form input, #form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aqua;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+}
+
+   /* DESKTOP VIEW (Laptop/Screen lian) */
+@media (min-width: 768px) {
+    #Projects {
+        grid-template-columns: 1fr 1fr 1fr; /* Tlar khatah pathum */
+    }
+    .art-container {
+        grid-template-columns: 1fr 1fr 1fr; /* Tlar khatah pathum */
+    }
+    #Contact{
+        display: flex;
+        justify-content: center;
+    }
+    #form {
+        width: 500px;
+    }
+}
